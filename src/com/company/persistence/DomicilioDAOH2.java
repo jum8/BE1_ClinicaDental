@@ -1,9 +1,8 @@
-package com.company.dao;
+package com.company.persistence;
 
-import com.company.dao.util.GeneradorDeSentencias;
+import com.company.persistence.util.GeneradorDeSentencias;
 import com.company.model.Domicilio;
-import com.company.model.Paciente;
-import com.company.dao.util.*;
+import com.company.persistence.util.*;
 
 import java.sql.*;
 import java.util.List;
@@ -15,7 +14,7 @@ public class DomicilioDAOH2 implements IDAO<Domicilio> {
 
 
     @Override
-    public Domicilio guardar(Domicilio domicilio) {
+    public Domicilio crear(Domicilio domicilio) {
         jdbc.cargarElControlador();
         Connection con = null;
         PreparedStatement ps = null;
@@ -55,12 +54,17 @@ public class DomicilioDAOH2 implements IDAO<Domicilio> {
     }
 
     @Override
-    public void eliminar(Long id) {
+    public void eliminar(int id) {
 
     }
 
     @Override
-    public Domicilio buscar(Long id) {
+    public Domicilio buscarPorId(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Domicilio> buscarTodos() {
         return null;
     }
 }

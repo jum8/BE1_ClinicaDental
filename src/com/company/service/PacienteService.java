@@ -1,6 +1,6 @@
 package com.company.service;
 
-import com.company.dao.IDAO;
+import com.company.persistence.IDAO;
 import com.company.model.Domicilio;
 import com.company.model.Paciente;
 
@@ -14,7 +14,7 @@ public class PacienteService {
     }
 
     public Paciente guardar(Paciente paciente) {
-        domicilioDAO.guardar(paciente.getDomicilio());
-        return pacienteDAO.guardar(paciente);
+        domicilioDAO.crear(paciente.getDomicilio());
+        return pacienteDAO.crear(paciente);
     }
 }

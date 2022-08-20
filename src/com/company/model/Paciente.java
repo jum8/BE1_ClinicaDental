@@ -10,6 +10,14 @@ public class Paciente {
     private LocalDate fechaIngreso;
     private Domicilio domicilio;
 
+    public Paciente(String apellido, String nombre, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.dni = dni;
+        this.fechaIngreso = fechaIngreso;
+        this.domicilio = domicilio;
+    }
+
     public String getApellido() {
         return apellido;
     }
@@ -31,7 +39,23 @@ public class Paciente {
         return domicilio;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public void setId(long id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "id=" + id +
+                ", apellido='" + apellido + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", dni=" + dni +
+                ", fechaIngreso=" + fechaIngreso +
+                ", domicilio=" + domicilio +
+                '}';
     }
 }

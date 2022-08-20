@@ -1,4 +1,4 @@
-package com.company.dao.util;
+package com.company.persistence.util;
 
 import java.util.List;
 
